@@ -11,6 +11,8 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "loadash": "^1.0.0",
+    "postcss": "^8.3.0",
+    "tailwindcss": "1.9.6",
     "vue": "^2.6.11"
   },
   "devDependencies": {

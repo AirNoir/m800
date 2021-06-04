@@ -3,6 +3,7 @@
     <input
       v-model="location"
       @keyup="handleLocationChanged"
+      class="rounded-md"
       type="text"
       placeholder="Please enter the location">
   </div>
@@ -39,7 +40,7 @@ export default {
   input {
     width: 250px;
     height: 30px;
-    border-radius: 5px;
+    // border-radius: 5px;
     border: 1px solid #bbb;
     padding-left: 8px;
   }
