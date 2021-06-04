@@ -1,27 +1,21 @@
 <template>
   <div id="app">
-    <SearchBar />
+    <search-bar />
     <main>
-
+      <bar-chart />
     </main>
   </div>
 </template>
 
 <script>
 import SearchBar from '@/components/SearchBar.vue';
+import BarChart from '@/components/charts/BarChart.vue';
 
 export default {
   name: 'App',
   components: {
     SearchBar,
-  },
-  created() {
-    this.init();
-  },
-  methods: {
-    init() {
-
-    },
+    BarChart,
   },
 };
 </script>

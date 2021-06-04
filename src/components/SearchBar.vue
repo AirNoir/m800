@@ -10,7 +10,7 @@
 
 <script>
 import { getLocation, getWeatherByLocationId } from '@/api';
-import { debounce } from 'lodash/debounce';
+import debounce from 'lodash/debounce';
 
 export default {
   data: () => ({
@@ -23,6 +23,7 @@ export default {
         if (status === 200 && data.length > 0) {
           const location = data[0];
           const resp = await getWeatherByLocationId(location.woeid);
+          console.log(resp);
         }
       } catch (error) {
         window.console.log(error);
