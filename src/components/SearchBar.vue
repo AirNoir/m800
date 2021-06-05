@@ -5,11 +5,12 @@
       @keyup="handleLocationChanged"
       class="rounded-md"
       type="text"
-      placeholder="Please enter the location">
+      placeholder="Please enter a location">
   </div>
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import { getLocation, getWeatherByLocationId } from '@/api';
 import debounce from 'lodash/debounce';
 
@@ -18,13 +19,16 @@ export default {
     location: '',
   }),
   methods: {
+    ...mapActions({
+      setWeather: 'setWeather',
+    }),
     handleLocationChanged: debounce(async function search() {
       try {
         const { status, data } = await getLocation(this.location);
         if (status === 200 && data.length > 0) {
           const location = data[0];
           const resp = await getWeatherByLocationId(location.woeid);
-          console.log(resp);
+          this.setWeather(resp.data);
         }
       } catch (error) {
         window.console.log(error);

@@ -3,6 +3,7 @@
     <search-bar />
     <main>
       <bar-chart />
+      <pie-chart />
     </main>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import SearchBar from '@/components/SearchBar.vue';
 import BarChart from '@/components/charts/BarChart.vue';
+import PieChart from '@/components/charts/PieChart.vue';
 
 export default {
   name: 'App',
   components: {
     SearchBar,
     BarChart,
+    PieChart,
   },
 };
 </script>
