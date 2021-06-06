@@ -10,6 +10,10 @@ yarn install
 yarn serve
 ```
 
+### Install Moesif Origin & CORS Changer for fetching API
+[Moesif Chrome Extension](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc)
+
+
 ### Compiles and minifies for production
 ```
 yarn build
