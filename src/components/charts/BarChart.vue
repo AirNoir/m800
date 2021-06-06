@@ -34,7 +34,7 @@ export default {
   },
   watch: {
     currentMax: {
-      handler() {
+      handler(v) {
         requestAnimationFrame(this.drawBar);
         this.drawBar();
       },
@@ -56,6 +56,9 @@ export default {
       }
     },
     drawMinMax() {
+      if (!this.currentMax || !this.currentMin) {
+        return;
+      }
       const {
         canvas, ctx, currentMax, currentMin, unit, margin,
       } = this;
